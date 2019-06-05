@@ -36,7 +36,7 @@ data: 返回结果数据
 ```
 # Request
 {"op": "subscribe", "args": ["spot/tick:ETH-BTC"]}
- 其中spot/ticker为频道名，ETH-BTC 为交易对
+ 其中spot/tick为频道名，ETH-BTC 为交易对
 # Response
 {
     "data":{
@@ -110,7 +110,7 @@ vol(string): 成交量(最近的24小时)
 ```
 # Request
 {"op":"subscribe", "args":["spot/matched:ETH-BTC"]}
- 其中spot/trade为频道名，ETH-USDT 为交易对
+ 其中spot/matched为频道名，ETH-USDT 为交易对
 # Response
 {
     "data": [
@@ -146,7 +146,7 @@ spot/klineD   // 1day k线数据频道 </br>
 ```
 # Request
 {"op": "subscribe", "args": ["spot/kline1:ETH-BTC"]}
- 其中spot/trade为频道名，ETH-USDT 为交易对
+ 其中spot/kline1为频道名，ETH-USDT 为交易对
 # Response
 {
     "data":[
