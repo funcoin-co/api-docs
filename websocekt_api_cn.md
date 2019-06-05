@@ -7,7 +7,7 @@ WebSocket是HTML5一种新的协议(Protocol)。它实现了客户端与服务�
 强烈建议开发者使用WebSocket API获取市场行情和买卖深度等信息。
 
 ## 请求交互
-币币交易WebSocket服务连接地址：```wss://www.funcoin.info/websocket/v1```
+币币交易WebSocket服务连接地址：```wss://www.funcoin.info/api/v1/ws```
 ### 发送请求
 请求数据格式为：</br>
 ```{"op": "<value>", "args": ["<value1>","<value2>"]} ```
