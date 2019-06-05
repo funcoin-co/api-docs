@@ -6,4 +6,7 @@
 账户和交易API需要身份验证，提供下单、撤单，查询订单和帐户信息等功能。行情API提供市场的行情数据，所有行情接口都是公开的。
 
 #### Funcoin API 文档
-https://github.com/funcoin-co/api-docs
+
+<https://github.com/funcoin-co/api-docs>
+
+
