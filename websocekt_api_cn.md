@@ -35,7 +35,7 @@ data: 返回结果数据
 
 ```
 # Request
-{"op": "subscribe", "args": ["spot/ticker:ETH-BTC"]}
+{"op": "subscribe", "args": ["spot/tick:ETH-BTC"]}
  其中spot/ticker为频道名，ETH-BTC 为交易对
 # Response
 {
