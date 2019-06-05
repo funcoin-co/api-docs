@@ -10,3 +10,6 @@
 <https://github.com/funcoin-co/api-docs>
 
 
+#### 开放Rest接口文档
+<https://github.com/funcoin-co/api-docs/blob/master/rest_api_cn.md>
+
