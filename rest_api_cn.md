@@ -1,4 +1,5 @@
-#REST API for SPOT 
+# REST API for SPOT 
+
 ## 开始使用    
 REST，即Representational State Transfer的缩写，是目前最流行的一种互联网软件架构。它结构清晰、符合标准、易于理解、扩展方便，正得到越来越多网站的采用。其优点如下：
 
@@ -250,12 +251,13 @@ type | Integer | 是 |  K线单位 1-1分钟K线 2-15分钟K线 3-1小时K线 4-
 size | Integer | 是 | 指定获取数据的条数
 since | Long | 是 | 时间戳，返回该时间戳以后的数据(例如1558927444000)
 
-
-###币币交易 API
+### 币币交易 API
 #### 下单
 币币交易提供限价单和市价单两种下单模式(更多下单模式将会在后期支持)。只有当您的账户有足够的资金才能下单。
 一旦下单，您的账户资金将在订单生命周期内被冻结。被冻结的资金以及数量取决于订单指定的类型和参数。</br>
+
 #####HTTP请求
+
 POST /api/v1/order
 
 URL ``` https://www.funcoin.info/api/v1/order``` 访问频率 10次/1秒
@@ -285,7 +287,9 @@ localOrderId | String | 是 | 用户自己生成的一个唯一ID
 
 #### 批量下单
 下指定币对的多个订单</br>
+
 #####HTTP请求
+
 POST /v1/batchOrder
 
 请求参数
@@ -342,7 +346,9 @@ GET https://www.funcoin.info/api/v1/batchOrder
 ```
 #### 撤单
 撤销之前下的未完成订单，支持批量撤单
+
 #####HTTP请求
+
 POST /v1/cancel
 
 请求参数
@@ -418,7 +424,7 @@ GET https://www.funcoin.info/api/v1/orders?symbol=ETH/BC&isComplete=true&pageInd
 }
 ```
 
-返回值说明
+#####返回值说明
 
 参数名 | 参数类型 |  描述 
 :-: | :-: | :-: | :-: 
@@ -430,7 +436,7 @@ id | Long | 订单Id
 unfilledAmount | String | 未成交数量
 status | Integer | 3-部分撤销 4-全部撤销 8-挂单 9-部分成交 10-全部成交
 
-注：部分撤销、挂单、部分成交算作未完成订单，全部撤销与全部成交为已完成订单
+#####注：部分撤销、挂单、部分成交算作未完成订单，全部撤销与全部成交为已完成订单
 
 #### 查看个人资产
 获取币币账户单个币种的余额、冻结和可用等信息。</br>
@@ -465,9 +471,7 @@ GET https://www.funcoin.info/api/v1/capital?currency=ETH
     "success": true
 }
 ```
-
-返回值说明
-
+##### 返回值说明
 
 参数名 | 参数类型 |  描述 
 :-: | :-: | :-: | :-: 
