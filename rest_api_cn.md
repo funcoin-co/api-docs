@@ -25,9 +25,9 @@ API 请求在通过 internet 传输的过程中极有可能被篡改，为了确
 所有REST请求头都必须包含以下内容：</br>
 
 * API访问秘钥(API-KEY): 您申请的API-KEY
-* 签名方法（API-SIGNATURE-METHOD）：用户计算签名的基于哈希的协议，此处使用 HmacSHA25
+* 签名方法（API-SIGNATURE-METHOD）：用户计算签名的基于哈希的协议，此处使用 HmacSHA256
 * 签名版本（API-SIGNATURE-VERSION）：签名协议的版本，此处使用1
-* 时间戳（API-TIMESTAMP）：您发出请求的时间 如：2017-05-11T16:22:06。在查询请求中包含此值有助于防止第三方截取您的请求
+* 时间戳（API-TIMESTAMP）：您发出请求的时间 如：1560224934000。在查询请求中包含此值有助于防止第三方截取您的请求
 * ID(API-UNIQUE-ID) : 除非另有说明，大多数标识符是UUID。当提出一个需要UUID的请求时，以下两个形式（有和没有破折号）都被接受。
 132fb6ae-456b-4654-b4e0-d681ac05cea1或者132fb6ae456b4654b4e0d681ac05cea1
 * 必选和可选参数：每个方法都有一组用于定义 API 调用的必需参数和可选参数。可以在每个方法的说明中查看这些参数及其含义。 请一定注意：对于 GET 请求，每个方法自带的参数都需要进行签名运算； 对于 POST请求，每个方法自带的参数不进行签名认证，即 POST 请求中需要进行签名运算的只有 API-KEY、API-SIGNATURE-METHOD、API-SIGNATURE-VERSION、API-TIMESTAMP 四个参数，其它参数放在 body中。
