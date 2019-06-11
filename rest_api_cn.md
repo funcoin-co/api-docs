@@ -36,7 +36,7 @@ API 请求在通过 internet 传输的过程中极有可能被篡改，为了确
 ### 签名步骤
 规范要计算签名的请求 因为使用 HMAC 进行签名计算时，使用不同内容计算得到的结果会完全不同。所以在进行签名计算前，请先对请求进行规范化处理。下面以查询某订单详情请求为例进行说明：</br>
 
-API-SIGNATURE的请求头对API-KEY + API-SIGNATURE-METHOD + API-SIGNATURE-VERSION + API-TIMESTAMP + API-UNIQUE-ID以及API-SECRET使用HMAC SHA256方法加密，通过BASE64编码输出而得到的。
+API-SIGNATURE的请求头对API-KEY + API-SIGNATURE-METHOD + API-SIGNATURE-VERSION + API-TIMESTAMP + API-UNIQUE-ID以及API-SECRET使用HMACSHA256方法加密，通过BASE64编码输出而得到的。
 
 1. 按顺序对请求头进行排序
 	```
@@ -51,7 +51,8 @@ API-SIGNATURE的请求头对API-KEY + API-SIGNATURE-METHOD + API-SIGNATURE-VERSI
 	```
 	API-KEY=e2xxxxxx-99xxxxxx-84xxxxxx-7xxxx&API-SIGNATURE-	METHOD=HmacSHA256&API-SIGNATURE-VERSION=2&API-	TIMESTAMP=1560177359000&API-UNIQUE-ID=9f6458ef-6e9b-4b16-9dd7-	b0469a6f1839&name=value
 	```
-4. 用上一步里生成的 “请求字符串” 和你的密钥 (Secret Key) 生成一个数字签名
+4. 用上一步里生成的 “请求字符串” 和你的密钥 (Secret Key) 使用HMACSHA256方法加密，通过	BASE64编码生成一个数字签名
+
 	```
 	4F65x5A2bLyMWVQj3Aqp+B4w+ivaA7n5Oi2SuYtCJ9o=
 	```
