@@ -468,6 +468,7 @@ GET https://www.funcoin.info/api/v1/capital?currency=ETH
 
 返回值说明
 
+
 参数名 | 参数类型 |  描述 
 :-: | :-: | :-: | :-: 
 availableCash | double | 可用数量
