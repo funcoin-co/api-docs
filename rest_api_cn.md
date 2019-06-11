@@ -8,7 +8,7 @@ REST，即Representational State Transfer的缩写，是目前最流行的一种
 客户端通过四个HTTP指令，对服务器端资源进行操作，实现“表现层状态转化”。
 建议开发者使用REST API进行币币交易或者资产提现等操作。
 
-##请求交互  
+## 请求交互  
 
 REST访问的根URL：https://www.funcoin.info/api/v1 所有请求基于Https协议。
 
@@ -60,9 +60,9 @@ API-SIGNATURE的请求头对API-KEY + API-SIGNATURE-METHOD + API-SIGNATURE-VERSI
 	API-SIGNATURE=4F65x5A2bLyMWVQj3Aqp+B4w+ivaA7n5Oi2SuYtCJ9o=
 	```
 
-##API参考
+## API参考
 
-###币币行情 API
+### 币币行情 API
 
 #### 1. Get /api/v1/ticker   获取币币行情
 
@@ -430,7 +430,7 @@ GET https://www.funcoin.info/api/v1/orders?symbol=ETH/BC&isComplete=true&pageInd
 
 ##### 返回值说明
 参数名 | 参数类型 |  描述 
-:-: | :-: | :-: | :-: 
+:-: | :-: | :-: 
 totalAmount | String | 委托数量
 orderType | Integer | 订单类型 1-限价单 2-市价单
 price | String | 委托价格
@@ -477,7 +477,7 @@ GET https://www.funcoin.info/api/v1/capital?currency=ETH
 ##### 返回值说明
 
 参数名 | 参数类型 |  描述 
-:-: | :-: | :-: | :-: 
+:-: | :-: | :-: 
 availableCash | double | 可用数量
 accountId | Integer | 币种Id
 settleCurrencyID | String | 币种
