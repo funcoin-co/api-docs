@@ -73,33 +73,42 @@ vol(string): 成交量(最近的24小时)
  {"op": "subscribe", "args": ["spot/depth:ETH-BTC"]}
   其中spot/depth为频道名，ETH-BTC 为交易对
  # Response
- {
-    "data": {
-        "asks": {
-            0.03123714: 0.2414,
-            0.03125415: 0.3286,
-            0.03127627: 0.3874,
-            0.03124671: 0.2258
-        },
-        "bids": {
-            0.03109433: 0.3827,
-            0.03106093: 0.4069,
-            0.03096551: 0.3366,
-            0.03107458: 0.3521,
-            0.03107702: 0.4242
-        },
-        "timestamp": 1559626731040
+{
+    "data":{
+        "asks":[
+            {
+                "amount":"0.4704",
+                "price":"0.031033"
+            },
+            {
+                "amount":"1.8508",
+                "price":"0.031097"
+            }
+        ],
+        "bids":[
+            {
+                "amount":"0.4259",
+                "price":"0.030615"
+            },
+            {
+                "amount":"1.9254",
+                "price":"0.030553"
+            }
+        ],
+        "timestamp":1560236719226
     },
-    "channel": "spot/depth:ETH-BTC"
+    "channel":"spot/depth:ETH-BTC"
 }
  ```
  
  返回值说明
  
  ```
- bids([double, double]):买方深度
- asks([double, double]):卖方深度
+ bids:买方深度
+ asks:卖方深度
  timestamp(string):服务器时间戳
+ amount(string):  数量
+ price(double): 价格
  ```
  
 ##### 3. 订阅成交记录
